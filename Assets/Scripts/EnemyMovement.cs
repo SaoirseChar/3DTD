@@ -1,40 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemyMovement : MonoBehaviour
+namespace TowerDefense.Enemy
 {
-    public float speed = 10f;
-
-    private Transform target;
-    private int wavepointIndex = 0;
-    private void Start()
+    public class EnemyMovement : MonoBehaviour
     {
-        target = Waypoints.points[0];
-    }
+        public float speed = 10f;
 
-    private void Update()
-    {
-        Vector3 dir = target.position - transform.position;
-        // normalized will make the vector normally
-
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-
-        if(Vector3.Distance(transform.position, target.position) <= 0.4)
+        private Transform target;
+        private int wavepointIndex = 0;
+        private void Start()
         {
-            GetNextWaypoint();
+            target = Waypoints.points[0];
         }
-    }
 
-    void GetNextWaypoint()
-    {
-        if(wavepointIndex >= Waypoints.points.Length - 1)
+        private void Update()
         {
-            Destroy(gameObject);
-            return;
-        }   
+            Vector3 dir = target.position - transform.position;
+            // normalized will make the vector normally
 
-        wavepointIndex++;
-        target = Waypoints.points[wavepointIndex];
+            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+
+            if (Vector3.Distance(transform.position, target.position) <= 0.4)
+            {
+                GetNextWaypoint();
+            }
+        }
+
+        void GetNextWaypoint()
+        {
+            if (wavepointIndex >= Waypoints.points.Length - 1)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            wavepointIndex++;
+            target = Waypoints.points[wavepointIndex];
+        }
     }
 }

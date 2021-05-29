@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Waypoints : MonoBehaviour
+namespace TowerDefense.Enemy
 {
-    public static Transform[] points;
-
-    private void Awake()
+    public class Waypoints : MonoBehaviour
     {
-        points = new Transform[transform.childCount];
+        public static Transform[] points;
 
-        for (int i = 0; i < points.Length; i++)
+        private void Awake()
         {
-            points[i] = transform.GetChild(i);
+            points = new Transform[transform.childCount];
+
+            for (int i = 0; i < points.Length; i++)
+            {
+                points[i] = transform.GetChild(i);
+            }
         }
     }
 }
