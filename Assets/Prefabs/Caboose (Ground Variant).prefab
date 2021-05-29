@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4958712953760788975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 317830566105633384, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8321058aec6b4ea49bc636b5edbcf370, type: 2}
+    - target: {fileID: 896534830643109337, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 961779176270812543, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492600826938300456, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390933559746213672, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_Name
+      value: Caboose (Ground Variant)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080861619530198424, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1df248e8a3af0245b405539f7da93da, type: 3}
