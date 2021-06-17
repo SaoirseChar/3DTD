@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 4080030489700356075}
   m_Layer: 0
   m_Name: Pengwin Pivot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -621,6 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0955edb74397c34da1ebbf8372b3f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 5
   runSpeed: 2
 --- !u!195 &4080030489700356075
 NavMeshAgent:

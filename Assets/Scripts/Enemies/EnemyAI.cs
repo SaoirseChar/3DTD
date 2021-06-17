@@ -10,13 +10,15 @@ namespace TowerDefense.Enemy
         private NavMeshAgent agent;
         private EnemyWaypoint waypoint;
         private Animator AgentAnimator;
+
+        [Header("Enemy Variables")]
+        public int Health = 5;
+
         [SerializeField] private float runSpeed;
-        private EnemyMovement thisEnemyMovement;
         // Start is called before the first frame update
         void Start()
         {
             agent = gameObject.GetComponent<NavMeshAgent>();
-            thisEnemyMovement = gameObject.GetComponent<EnemyMovement>();
             // FindObjectsOfType gets every instance of this component in the scene
             waypoint = FindObjectOfType<EnemyWaypoint>();
             AgentAnimator = GetComponent<Animator>();
@@ -28,11 +30,17 @@ namespace TowerDefense.Enemy
         {
             if (!agent.pathPending && agent.remainingDistance < 0.3f)
             {
-                print("GAME OVER");
+                GameOver();
             }
 
             // If running, play running animation.
             AgentAnimator.SetBool("Running", agent.velocity.magnitude > runSpeed);
         }
+    public void GameOver()
+    { 
+                print("GAME OVER");
+            Destroy(transform.parent.gameObject);
     }
+    }
+
 }
