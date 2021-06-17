@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using TowerDefense.Enemy;
 namespace TowerDefense.Turret
 {
     public class Turret : MonoBehaviour
@@ -22,6 +22,7 @@ namespace TowerDefense.Turret
         public GameObject bulletPrefab;
         public Transform firePoint;
 
+        public int turrentDamage = 1;
         [SerializeField]
         private float howOftenTurretLocksOn = 0.5f;
 
@@ -56,7 +57,7 @@ namespace TowerDefense.Turret
 
             if (bullet != null)
             {
-                bullet.Seek(target);
+                bullet.Seek(target, turrentDamage);
             }
         }
 
@@ -85,7 +86,7 @@ namespace TowerDefense.Turret
                     nearestEnemy = enemy;
                 }
             }
-            if (nearestEnemy != null && shortestDistance <= range)
+            if ((nearestEnemy != null || !nearestEnemy.GetComponent<EnemyAI>().amIDead) && shortestDistance <= range)
             {
                 target = nearestEnemy.transform;
             }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TowerDefense.Enemy;
 namespace TowerDefense.Turret
 {
     public class Bullet : MonoBehaviour
@@ -10,9 +10,12 @@ namespace TowerDefense.Turret
         public float speed = 90;
         public GameObject impactEffect;
 
-        public void Seek(Transform _target)
+        private int impactDamage;
+
+        public void Seek(Transform _target, int _ImpactDamage)
         {
             target = _target;
+            impactDamage = _ImpactDamage;
         }
 
         // Update is called once per frame
@@ -33,19 +36,29 @@ namespace TowerDefense.Turret
                 return;
             }
             transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+            transform.LookAt(target);
         }
 
         void HitTarget()
         {
-
-
             GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
 
             Destroy(effectIns, 2f);
 
-            Destroy(target.gameObject);
+            EnemyTakesDamage(target);
 
             Destroy(gameObject);
         }
+
+        void EnemyTakesDamage(Transform enemy)
+        {
+            EnemyAI thisEnemy = enemy.GetComponent<EnemyAI>();
+
+            if (thisEnemy != null)
+            {
+                thisEnemy.TakeDamage(impactDamage);
+            }
+        }
+
     }
 }
