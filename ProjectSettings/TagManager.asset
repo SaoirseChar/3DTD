@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Carriage
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Carriage
   - Water
   - UI
   - 

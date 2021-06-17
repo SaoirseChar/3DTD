@@ -82,9 +82,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328049391980598309, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -6731752312930211358, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4716883705408301151, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}
       propertyPath: m_Name
       value: Train test export
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324045952129561835, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aaae516fcf909c43880bcaa999be607, type: 3}

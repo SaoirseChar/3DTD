@@ -13,7 +13,6 @@ namespace TowerDefense.Background
         void Update()
         {
             transform.position += new Vector3((speed * Time.deltaTime),0,0);
-            print(transform.position);
             if (transform.position.x>=2000)
             {
                 transform.position += new Vector3(-3000, 0, 0);
