@@ -19,20 +19,14 @@ namespace TowerDefense.Turret
             thisInstance = this;
         }
 
-        public Turret selectedTower;
+        public GameObject selectedTurret;
 
-        public Turret standardTurretPrefab;
+        public GameObject standardTurretPrefab;
 
-        // Start is called before the first frame update
-        void Start()
+        public void SelectStandarTurret()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            print("Standard Turret Selected");
+            selectedTurret = standardTurretPrefab;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace TowerDefense.Turret
         public float range = 15f;
         public float fireRate = 1f;
         private float fireCountdown = 0f;
+        public int turretCost = 100;
 
         [Header("Unity Setup Fields")]
         public string enemyTag = "Enemy";
