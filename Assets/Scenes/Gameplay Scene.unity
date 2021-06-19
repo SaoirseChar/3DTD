@@ -272,10 +272,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 381009255}
     m_Modifications:
-    - target: {fileID: 5027238959912401934, guid: 25ba10d38e8a4bf42b1db1e2a451c95c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d7acce774a54c2a4a9d001d3e068a306, type: 2}
     - target: {fileID: 5838019222000091628, guid: 25ba10d38e8a4bf42b1db1e2a451c95c, type: 3}
       propertyPath: m_Name
       value: Full Track (1)
@@ -283,10 +279,6 @@ PrefabInstance:
     - target: {fileID: 8967777522117818037, guid: 25ba10d38e8a4bf42b1db1e2a451c95c, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8967777522117818037, guid: 25ba10d38e8a4bf42b1db1e2a451c95c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.062
       objectReference: {fileID: 0}
     - target: {fileID: 8967777522117818037, guid: 25ba10d38e8a4bf42b1db1e2a451c95c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3597,7 +3589,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.9
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3885,10 +3877,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9168152997777092694, guid: 592e8dc0c2dda454796d5ad91487a437, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d7acce774a54c2a4a9d001d3e068a306, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 592e8dc0c2dda454796d5ad91487a437, type: 3}
 --- !u!4 &1425615695 stripped
@@ -5318,6 +5306,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -35.21
       objectReference: {fileID: 0}
+    - target: {fileID: 1949590162797604185, guid: 5e308a3f330a58f479a5c5aa162a91d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4210289272954351448, guid: 5e308a3f330a58f479a5c5aa162a91d0, type: 3}
       propertyPath: m_Name
       value: Train Carriage 2
@@ -5504,7 +5496,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5901,6 +5893,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 965843944}
     m_Modifications:
+    - target: {fileID: 3795649050965088083, guid: 5e308a3f330a58f479a5c5aa162a91d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4210289272954351448, guid: 5e308a3f330a58f479a5c5aa162a91d0, type: 3}
       propertyPath: m_Name
       value: Train Carriage 1
@@ -5947,6 +5943,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4210289272954351449, guid: 5e308a3f330a58f479a5c5aa162a91d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112750350825317908, guid: 5e308a3f330a58f479a5c5aa162a91d0, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
