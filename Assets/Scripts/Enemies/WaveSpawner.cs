@@ -42,6 +42,7 @@ namespace TowerDefense.Enemy
 
         private void Start()
         {
+            waveNumber = 0;
             enemiesSpawning = false;
             print(waves.Length);
         }
@@ -80,10 +81,11 @@ namespace TowerDefense.Enemy
 
             WaveComponent wave = waves[waveNumber];
 
-            for (int i = 0; i < waveNumber; i++)
+            for (int i = 0; i < wave.count; i++)
             {
+                print("Enemy Spawned");
                 SpawnEnemy(wave.enemy);
-                yield return new WaitForSeconds(1/wave.rate);
+                yield return new WaitForSeconds(wave.rate);
             }
             yield return new WaitForSeconds(5);
             enemiesSpawning = false;

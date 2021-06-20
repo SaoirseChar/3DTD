@@ -10,6 +10,7 @@ namespace TowerDefense.Enemy
     {
         private NavMeshAgent agent;
         private EnemyWaypoint waypoint;
+        private EnemyMidPoint midpoint;
         private Animator AgentAnimator;
 
         [Header("Enemy Variables")]
@@ -28,18 +29,22 @@ namespace TowerDefense.Enemy
             agent = gameObject.GetComponent<NavMeshAgent>();
             // FindObjectsOfType gets every instance of this component in the scene
             waypoint = FindObjectOfType<EnemyWaypoint>();
+            midpoint = FindObjectOfType<EnemyMidPoint>();
             AgentAnimator = GetComponentInChildren<Animator>();
-            agent.SetDestination(waypoint.Position);
+            agent.SetDestination(midpoint.Position);
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (!agent.pathPending && agent.remainingDistance < 0.3f)
+            if (!agent.pathPending && Vector3.Distance(gameObject.transform.position, midpoint.transform.position) < 2f)
+            {
+                agent.SetDestination(waypoint.Position);
+            }
+            if (!agent.pathPending && Vector3.Distance(gameObject.transform.position, waypoint.transform.position) < 2f)
             {
                 GameOver();
             }
-
             // If running, play running animation.
             AgentAnimator.SetBool("Running", agent.velocity.magnitude > runSpeed);
         }
