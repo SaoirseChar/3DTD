@@ -23,10 +23,11 @@ namespace TowerDefense.Turret
 
         public GameObject bulletPrefab;
         public Transform firePoint;
+        public Animator myAnimator;
 
         public int turrentDamage = 1;
         [SerializeField]
-        private float howOftenTurretLocksOn = 0.5f;
+        private float howOftenTurretLocksOn = 0.2f;
 
         // Start is called just before any of the Update methods is called the first time
         private void Start()
@@ -61,6 +62,7 @@ namespace TowerDefense.Turret
             {
                 bullet.Seek(target, turrentDamage);
             }
+            myAnimator.SetTrigger("Shoot");
         }
 
         // This will be used to lock on to the closest target.

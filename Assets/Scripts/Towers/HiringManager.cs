@@ -19,14 +19,13 @@ namespace TowerDefense.Turret
             thisInstance = this;
         }
 
+
         public GameObject selectedTurret;
 
-        public GameObject standardTurretPrefab;
-
-        public void SelectStandarTurret()
+        public void SelectTurret(GameObject _prefab)
         {
             print("Standard Turret Selected");
-            selectedTurret = standardTurretPrefab;
+            selectedTurret = _prefab;
         }
     }
 }

@@ -15,19 +15,22 @@ namespace TowerDefense.Turret
         }
 
         // OnMouseUp is called when the user has released the mouse button
-        private void OnMouseUp()
+        void OnMouseUp()
         {
+            print("Placement clicked.");
+            myHiringManager = FindObjectOfType<HiringManager>();
+            int turretCost = myHiringManager.selectedTurret.GetComponentInChildren<Turret>().turretCost;
             if (myHiringManager.selectedTurret != null)
             {
-                if (PlayerManager.currentMoney < myHiringManager.selectedTurret.GetComponent<Turret>().turretCost)
+                if (PlayerManager.currentMoney < turretCost)
                 {
                     print("Not Enough money");
                     return;
                 }
-                PlayerManager.currentMoney -= myHiringManager.selectedTurret.GetComponent<Turret>().turretCost;
+                PlayerManager.currentMoney -= turretCost;
 
                 Instantiate(myHiringManager.selectedTurret, transform.parent.position, transform.parent.rotation);
-                Destroy(transform.parent.gameObject);
+                Destroy(gameObject);
             }
         }
     }
