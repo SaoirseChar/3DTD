@@ -10,18 +10,36 @@ namespace TowerDefense.Player
 {
     public class PlayerManager : MonoBehaviour
     {
+        public static PlayerManager thisInstance;
+
+        void Awake()
+        {
+            if (thisInstance != null)
+            {
+                Debug.LogError("More than one BuildManager in scene!");
+                return;
+            }
+            thisInstance = this;
+        }
+
+        public static bool GameIsOver;
+        public GameObject gameOverUI;
+        public GameObject WinnerUI;
+
         [Header("Textboxes")]
         public TMP_Text moneyText;
         public TMP_Text roundNumber;
+        public TMP_Text roundNumber2;
 
         [Header("Actual Stats")]
         public static int currentMoney;
         public static int currentRound;
         // Start is called before the first frame update
-        void Awake()
+        void Start()
         {
+            GameIsOver = false;
             currentRound = 0;
-            currentMoney = 200;
+            currentMoney = 4000;
         }
 
         // Update is called once per frame
@@ -29,11 +47,27 @@ namespace TowerDefense.Player
         {
             moneyText.text = ("Money: " + currentMoney);
             roundNumber.text = ("Round: " + currentRound);
+            roundNumber2.text = ("Round: " + currentRound);
         }
-
+        public void IncreaseRound()
+        {
+            currentRound++;
+        }
         public static void GameOver()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        void EndGame()
+        {
+            GameIsOver = true;
+            gameOverUI.SetActive(true);
+        }
+
+        public void WinGame()
+        {
+            GameIsOver = true;
+            WinnerUI.SetActive(true);
         }
     }
 }

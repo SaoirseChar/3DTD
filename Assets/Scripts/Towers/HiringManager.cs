@@ -24,7 +24,6 @@ namespace TowerDefense.Turret
 
         public void SelectTurret(GameObject _prefab)
         {
-            print("Standard Turret Selected");
             selectedTurret = _prefab;
         }
     }

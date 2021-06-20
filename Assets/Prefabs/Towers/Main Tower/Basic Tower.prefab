@@ -77,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 15
   fireRate: 1
-  turretCost: 100
+  turretCost: 2000
   enemyTag: Enemy
   turnSpeed: 10
   partToRotate: {fileID: 7166891004666686284}
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4623924397496907692}
   m_Layer: 0
-  m_Name: PenguinBasicDone
+  m_Name: Basic Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

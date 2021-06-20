@@ -11,7 +11,7 @@ namespace TowerDefense.Turret
         public float range = 15f;
         public float fireRate = 1f;
         private float fireCountdown = 0f;
-        public int turretCost = 100;
+        public int turretCost = 2000;
 
         [Header("Unity Setup Fields")]
         public string enemyTag = "Enemy";
@@ -27,11 +27,12 @@ namespace TowerDefense.Turret
 
         public int turrentDamage = 1;
         [SerializeField]
-        private float howOftenTurretLocksOn = 0.2f;
+        private float howOftenTurretLocksOn;
 
         // Start is called just before any of the Update methods is called the first time
         private void Start()
         {
+            howOftenTurretLocksOn = 0.2f;
             // Runs every howOftenTurretLocksOn seconds from 0 seconds.
             InvokeRepeating("UpdateTarget", 0f, howOftenTurretLocksOn);
         }
@@ -47,7 +48,10 @@ namespace TowerDefense.Turret
 
             if (fireCountdown <= 0f)
             {
-                Shoot();
+                if (!target.GetComponent<EnemyAI>().amIDead)
+                {
+                    Shoot();
+                }
                 fireCountdown = 1f / fireRate;
             }
 
@@ -81,18 +85,27 @@ namespace TowerDefense.Turret
             GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
             float shortestDistance = Mathf.Infinity;
             GameObject nearestEnemy = null;
-            foreach (GameObject enemy in enemies)
+            for (int i = 0; i < enemies.Length; i++)
             {
-                float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-                if (distanceToEnemy < shortestDistance)
+                bool isThisEnemyDead = enemies[i].GetComponent<EnemyAI>().amIDead;
+                if (!isThisEnemyDead)
                 {
-                    shortestDistance = distanceToEnemy;
-                    nearestEnemy = enemy;
+                    float distanceToEnemy = Vector3.Distance(transform.position, enemies[i].transform.position);
+                    if (distanceToEnemy < shortestDistance)
+                    {
+                        shortestDistance = distanceToEnemy;
+                        nearestEnemy = enemies[i];
+                    }
                 }
+                isThisEnemyDead = false;
             }
-            if ((nearestEnemy != null || !nearestEnemy.GetComponent<EnemyAI>().amIDead) && shortestDistance <= range)
+
+            if (nearestEnemy != null)
             {
-                target = nearestEnemy.transform;
+                if (!nearestEnemy.GetComponent<EnemyAI>().amIDead && shortestDistance <= range)
+                {
+                    target = nearestEnemy.transform;
+                }
             }
             else
             {

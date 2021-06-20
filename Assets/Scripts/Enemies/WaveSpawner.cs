@@ -3,20 +3,23 @@ using System.Collections;
 using TMPro;
 using Sirenix.OdinInspector;
 
+using TowerDefense.Player;
+
 namespace TowerDefense.Enemy
 {
     public class WaveSpawner : MonoBehaviour
     {
+        public static int EnemiesAlive = 0;
+
         public Transform enemyPrefab;
 
         [Header("Spawn Variables")]
         public float timeBetweenWaves = 5f;
         public float timeBetweenEnemies = 0.5f;
-        [LabelText("Spawn Location")]public Transform spawnPoint;
+        [LabelText("Spawn Location")] public Transform spawnPoint;
 
         [Header("Spawn TextBoxes")]
         public TMP_Text waveCountdownText;
-        public TMP_Text waveNumberText;
 
 
         private int waveNumber = 0;
@@ -24,12 +27,36 @@ namespace TowerDefense.Enemy
         private float countdown = 2f;
 
 
+        public PlayerManager playerManager;
+
+        [System.Serializable]
+        public class WaveComponent
+        {
+            public GameObject enemy;
+            public int count;
+            public float rate;
+        }
+
+        public WaveComponent[] waves;
+        private int waveIndex = 0;
+
         private void Start()
         {
             enemiesSpawning = false;
+            print(waves.Length);
         }
         private void Update()
         {
+            if (EnemiesAlive > 0)
+            {
+                return;
+            }
+
+            if (waveIndex == waves.Length)
+            {
+                playerManager.WinGame();
+                this.enabled = false;
+            }
             // Spawn wave on count down.
             if (countdown <= 0)
             {
@@ -42,7 +69,6 @@ namespace TowerDefense.Enemy
                 countdown -= Time.deltaTime;
                 // Display the waves and when they next Spawn
                 waveCountdownText.text = ("Next Wave In: " + Mathf.Round(countdown).ToString());
-                waveNumberText.text = ("Round: " + Mathf.Round(waveNumber).ToString());
             }
         }
 
@@ -50,20 +76,24 @@ namespace TowerDefense.Enemy
         {
             enemiesSpawning = true;
             waveCountdownText.gameObject.SetActive(false);
-            waveNumber++;
+            playerManager.IncreaseRound();
+
+            WaveComponent wave = waves[waveNumber];
+
             for (int i = 0; i < waveNumber; i++)
             {
-                SpawnEnemy();
-                yield return new WaitForSeconds(timeBetweenEnemies);
+                SpawnEnemy(wave.enemy);
+                yield return new WaitForSeconds(1/wave.rate);
             }
             yield return new WaitForSeconds(5);
             enemiesSpawning = false;
             waveCountdownText.gameObject.SetActive(true);
+            waveNumber++;
         }
 
-        void SpawnEnemy()
+        void SpawnEnemy(GameObject _enemy)
         {
-            Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+            Instantiate(_enemy, spawnPoint.position, spawnPoint.rotation);
         }
     }
 }

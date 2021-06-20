@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2835855359427925208}
   - component: {fileID: 2519255514811560369}
   - component: {fileID: 8842934553629413764}
-  m_Layer: 3
-  m_Name: TrainFloor (1)
+  m_Layer: 0
+  m_Name: TrainRoof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2455779455827634999}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.81, y: 3.33, z: -1.06}
-  m_LocalScale: {x: 168.75436, y: 408.54367, z: 19.435879}
+  m_LocalPosition: {x: 1, y: 3.28, z: -0.84}
+  m_LocalScale: {x: 179.55464, y: 405.6606, z: 20.679775}
   m_Children: []
   m_Father: {fileID: 8387614374481249704}
   m_RootOrder: 7

@@ -54,7 +54,6 @@ namespace TowerDefense.Enemy
         {
             health -= amount;
 
-
             if (health <= 0 && !amIDead)
             {
                 EndThisLife();
@@ -63,7 +62,6 @@ namespace TowerDefense.Enemy
 
         private void EndThisLife()
         {
-            print("LMAO DEAD");
             amIDead = true;
             PlayerManager.currentMoney += moneyOnDeath;
             AgentAnimator.SetTrigger("Dying");
@@ -72,5 +70,4 @@ namespace TowerDefense.Enemy
             Destroy(transform.parent.gameObject, 2);
         }
     }
-
 }

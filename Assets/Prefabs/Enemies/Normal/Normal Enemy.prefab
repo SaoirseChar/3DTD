@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5282417886374633838}
   m_Layer: 0
-  m_Name: Enemy Pivot
+  m_Name: Normal Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -307,9 +307,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.10333333
+  m_VoxelSize: 0.05
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: ff31c4984d17807468cf7665b1050fcb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: d0d88dd2a48421f429b2ff9fea85901c, type: 2}
 --- !u!1 &6865401318956084806
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7019132380335679193}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -404,7 +404,7 @@ Transform:
   - {fileID: 1202046554234622988}
   m_Father: {fileID: 9070957341594610884}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &2978591295541947860
 Animator:
   serializedVersion: 3
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   health: 5
-  moneyOnDeath: 3
+  moneyOnDeath: 100
   amIDead: 0
   runSpeed: 2
 --- !u!195 &4080030489700356075
@@ -637,9 +637,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.6
   m_Speed: 5
-  m_Acceleration: 16
+  m_Acceleration: 24
   avoidancePriority: 50
-  m_AngularSpeed: 360
+  m_AngularSpeed: 720
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

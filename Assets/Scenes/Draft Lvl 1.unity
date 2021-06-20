@@ -2281,7 +2281,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.85
+  m_fontSize: 29
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3841,6 +3841,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 943125619}
   waveCountdownText: {fileID: 1438130744}
   waveNumberText: {fileID: 217152239}
+  waveComps:
+  - enemyPrefab: {fileID: 0}
+    num: 0
 --- !u!43 &354727152
 Mesh:
   m_ObjectHideFlags: 0
@@ -4690,7 +4693,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.85
+  m_fontSize: 28.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
