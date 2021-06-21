@@ -5688,19 +5688,19 @@ MonoBehaviour:
     rate: 1
   - enemy: {fileID: 6786494719522651885, guid: c8e8e892e615c5048bb866d32a561fbd, type: 3}
     count: 60
+    rate: 0.5
+  - enemy: {fileID: 974008381586348739, guid: 8971df46d9c1ef14f81745befb8c7551, type: 3}
+    count: 1000
     rate: 1
   - enemy: {fileID: 974008381586348739, guid: 8971df46d9c1ef14f81745befb8c7551, type: 3}
-    count: 2
-    rate: 1
+    count: 1000
+    rate: 0.5
   - enemy: {fileID: 974008381586348739, guid: 8971df46d9c1ef14f81745befb8c7551, type: 3}
-    count: 2
-    rate: 1
+    count: 1000
+    rate: 0.1
   - enemy: {fileID: 974008381586348739, guid: 8971df46d9c1ef14f81745befb8c7551, type: 3}
-    count: 2
-    rate: 1
-  - enemy: {fileID: 974008381586348739, guid: 8971df46d9c1ef14f81745befb8c7551, type: 3}
-    count: 2
-    rate: 1
+    count: 1000
+    rate: 0.01
 --- !u!1 &1340636999
 GameObject:
   m_ObjectHideFlags: 0
