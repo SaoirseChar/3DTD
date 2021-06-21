@@ -623,7 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   health: 5
-  moneyOnDeath: 100
+  moneyOnDeath: 400
   amIDead: 0
   runSpeed: 2
 --- !u!195 &5493188391196905816

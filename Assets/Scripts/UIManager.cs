@@ -27,6 +27,11 @@ namespace TowerDefense.Turret
             Time.timeScale = 1;
             SceneManager.LoadScene(0);
         }
+        public void PlayGame()
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(1);
+        }
 
         public void QuitButton()
         {
