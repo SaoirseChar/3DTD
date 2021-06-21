@@ -51,7 +51,8 @@ namespace TowerDefense.Enemy
         public void GameOver()
         {
             print("GAME OVER");
-            PlayerManager.GameOver();
+            PlayerManager PMan = FindObjectOfType<PlayerManager>();
+            PMan.GameOver();
             Destroy(transform.parent.gameObject);
         }
 

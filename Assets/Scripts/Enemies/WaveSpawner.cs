@@ -53,7 +53,7 @@ namespace TowerDefense.Enemy
                 return;
             }
 
-            if (waveIndex == waves.Length)
+            if (waveIndex >= 14)
             {
                 playerManager.WinGame();
                 this.enabled = false;

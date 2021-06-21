@@ -53,9 +53,9 @@ namespace TowerDefense.Player
         {
             currentRound++;
         }
-        public static void GameOver()
+        public void GameOver()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            EndGame();
         }
 
         void EndGame()
