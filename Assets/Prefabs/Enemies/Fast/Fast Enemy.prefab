@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PenguinFast
       objectReference: {fileID: 0}
+    - target: {fileID: 5669858239372760899, guid: d2921037ecc65294aa83e256fb930713, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: baa39c73986e59747b3dab79b9e0aedb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2921037ecc65294aa83e256fb930713, type: 3}
 --- !u!1 &5058731231712943540 stripped

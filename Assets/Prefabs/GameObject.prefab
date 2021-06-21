@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PenguinFast
       objectReference: {fileID: 0}
+    - target: {fileID: 5669858239372760899, guid: d2921037ecc65294aa83e256fb930713, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: baa39c73986e59747b3dab79b9e0aedb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2921037ecc65294aa83e256fb930713, type: 3}
 --- !u!4 &1282350787049645120 stripped
@@ -118,6 +122,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7829976020061097955}
     m_Modifications:
+    - target: {fileID: 153952332655169256, guid: 81347c9ff03a4e144812800f1c70d738, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7acce774a54c2a4a9d001d3e068a306, type: 2}
     - target: {fileID: 462696508244121475, guid: 81347c9ff03a4e144812800f1c70d738, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -178,6 +186,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainCab
       objectReference: {fileID: 0}
+    - target: {fileID: 2140303149436407187, guid: 81347c9ff03a4e144812800f1c70d738, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7acce774a54c2a4a9d001d3e068a306, type: 2}
+    - target: {fileID: 4513517783631709891, guid: 81347c9ff03a4e144812800f1c70d738, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7acce774a54c2a4a9d001d3e068a306, type: 2}
+    - target: {fileID: 4686159217186193516, guid: 81347c9ff03a4e144812800f1c70d738, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7acce774a54c2a4a9d001d3e068a306, type: 2}
+    - target: {fileID: 7716941907808132933, guid: 81347c9ff03a4e144812800f1c70d738, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7acce774a54c2a4a9d001d3e068a306, type: 2}
+    - target: {fileID: 8329170959777843924, guid: 81347c9ff03a4e144812800f1c70d738, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7acce774a54c2a4a9d001d3e068a306, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81347c9ff03a4e144812800f1c70d738, type: 3}
 --- !u!4 &2815001441616786868 stripped
@@ -252,6 +280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PenguinBasic (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6801738708157864337, guid: 6d40fc723450de2468e88e8b26cdf155, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: baa39c73986e59747b3dab79b9e0aedb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d40fc723450de2468e88e8b26cdf155, type: 3}
 --- !u!4 &4117541656812356111 stripped
@@ -322,6 +354,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -267245662966997120, guid: 6eab1daee5b18f245a07225656882c4f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5932a09fe8adc4f4c9601c77b171718a, type: 2}
     - target: {fileID: 919132149155446097, guid: 6eab1daee5b18f245a07225656882c4f, type: 3}
       propertyPath: m_Name
       value: PenguinHeavy
@@ -484,6 +520,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0041
       objectReference: {fileID: 0}
+    - target: {fileID: 8417361359673230750, guid: 42d47229c37982d449035570fb4cb7be, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4dae12dd83048c74999fed67cbb4b972, type: 2}
     - target: {fileID: 8870420572363277021, guid: 42d47229c37982d449035570fb4cb7be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00051
@@ -598,6 +638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerRifle
       objectReference: {fileID: 0}
+    - target: {fileID: 8417361359673230750, guid: 42d47229c37982d449035570fb4cb7be, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4dae12dd83048c74999fed67cbb4b972, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42d47229c37982d449035570fb4cb7be, type: 3}
 --- !u!4 &9066609534467652404 stripped
@@ -672,6 +716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PenguinBasic
       objectReference: {fileID: 0}
+    - target: {fileID: 6801738708157864337, guid: 6d40fc723450de2468e88e8b26cdf155, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: baa39c73986e59747b3dab79b9e0aedb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d40fc723450de2468e88e8b26cdf155, type: 3}
 --- !u!4 &8696184268530879241 stripped
